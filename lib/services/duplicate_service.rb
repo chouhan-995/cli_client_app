@@ -10,7 +10,6 @@ class DuplicateService < BaseService
     return :exit_after_display unless field
 
     results = DuplicateChecker.call(@data, field)
-    puts results
     return display_no_duplicates_message if results.empty?
 
     display_duplicates(field, results)
